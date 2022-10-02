@@ -1,0 +1,159 @@
+<div class="">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-12 grid-margin">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Ajouter un utlisateur :</h4>
+            <form class="form-sample" (ngSubmit)="onSubmit()">
+              <p class="card-description">
+                info Personal
+              </p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Nom</label>
+                    <div class="col-sm-9">
+                      <input type="text" ngModel  [(ngModel)]="user.nom"  placeholder="tapez le nom" class="form-control"  />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Prenom</label>
+                    <div class="col-sm-9">
+                      <input type="text" ngModel [(ngModel)]="user.prenom"  placeholder="tapez le prenom" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label"  >Genre</label>
+                    <div class="col-sm-9">
+                      <select [(ngModel)]="user.genre" ngModel class="form-control">
+                        <option selected>Homme</option>
+                        <option>Femme</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Date de naissance</label>
+                    <div class="col-sm-9">
+                      <input class="form-control" ngModel [(ngModel)]="user.DateNaissance" placeholder="dd/mm/yyyy" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Email</label>
+                    <div class="col-sm-9">
+                      <input type="text" ngModel [(ngModel)]="user.email" placeholder="saisir votre email" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Telephone</label>
+                    <div class="col-sm-9">
+                      <input type="text" ngModel [(ngModel)]="user.telephone" placeholder="+216 12 345 678" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  <p class="card-description">
+                  Address
+                </p>-->
+              <div class="row">
+
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Mot de passe</label>
+                    <div class="col-sm-9">
+                      <input type="text" ngModel [(ngModel)]="user.password" placeholder="tapez le mot de passe" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <!-- <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label">Role</label>
+                      <div class="col-sm-9">
+                        <select class="form-control">
+                          <option>admin</option>
+                          <option>user</option>
+                          <option>a</option>
+                          <option>Category4</option>
+                        </select>
+                      </div>
+                    </div> 
+                  </div>-->
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <div class="col-sm-1"></div>
+                    <label class="col-sm-2 col-form-label" >Role</label>
+                    <div class="col-sm-3" >
+                      <select class="form-control" ngModel  [(ngModel)]="user.roleId">
+                        <option *ngFor="let r of roles" [ngValue]="r.nom" value="r.id_role">{{r.nom}}</option>
+                        
+                      </select>
+                    </div>
+                    <label class="col-sm-2 col-form-label">Etat</label>
+                    <div class="col-sm-3">
+                      <select class="form-control" ngModel [(ngModel)]="user.etat">
+                        <option selected value="active">active</option>
+                        <option value="desacive">desaciver</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Address</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <!--<div class="form-group row">
+                      <label class="col-sm-3 col-form-label">code postale</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>-->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                      <button class="btn btn-secondary mr-2" type="">Annuler</button>
+                    </div>
+                    <div class="col-sm-4">
+                      <button class="btn btn-primary mr-2" type="submit" >Ajouter</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

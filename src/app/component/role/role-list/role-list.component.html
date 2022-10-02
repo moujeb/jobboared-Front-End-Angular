@@ -1,0 +1,115 @@
+<div class="">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Ajouter un role</h4>
+                        <p class="card-description">
+                            formulaire role
+                        </p>
+                        <form class="forms-sample">
+                            <div class="row">
+                                <div class="col-12">&nbsp;&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">&nbsp;&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">&nbsp;&nbsp;</div>
+                            </div>
+                            <div class="row">
+
+                                <div class="form-group col-12">
+                                    <label >Nom :</label>
+                                    <input type="text" [ngModel]="role.nom" class="form-control" id="role"
+                                        placeholder="saisir le nom du role ...">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">&nbsp;&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">&nbsp;&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">&nbsp;&nbsp;</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-5"></div>
+                                <div class="col-7">
+                                    <div class="row">
+                                        
+                                        <div class="col-sm-6">
+                                          <button class="btn btn-secondary mr-2" type="">Annuler</button>
+                                        </div>
+                                        <div class="col-sm-6">
+                                          <button class="btn btn-primary mr-2" type="submit" >Ajouter</button>
+                                        </div>
+                                      </div>
+                               
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Liste des roles</h4>
+                        <p class="card-description">
+                            la liste de tous les roles
+                        </p>
+                        <div class="">
+                            <table class="table">
+                                <thead class="" style="background-color:#00c8bf ;color: aliceblue;">
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nom</th>
+                                    <th scope="col">Action</th>
+                                    
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr style="text-align: center ;" *ngFor="let r of roles" scope="row">
+                                    
+                                    <td>{{r.id_role}}</td>
+                                    <td>{{r.nom}}</td>
+                                    <td style="align-items:baseline  ;">
+
+
+                                        <button class="btn btn-md btn-sm btn-info"><span class="typcn typcn-edit "
+                                                style="color :white;"></span></button>
+    
+    
+                                        <button class="btn btn-md btn-sm btn-danger"><span
+                                                class="typcn typcn-delete-outline " style="color :white;"></span></button>
+                                        <button class="btn btn-md btn-sm btn-secondary"><span class="typcn typcn-zoom "
+                                                style="color :white;"></span></button>
+    
+    
+    
+    
+                                    </td>
+                                  </tr>
+                                 
+                                </tbody>
+                              </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

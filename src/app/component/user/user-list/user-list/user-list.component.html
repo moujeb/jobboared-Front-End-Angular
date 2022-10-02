@@ -1,0 +1,128 @@
+<div class="content-wrapper">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="shdow-none card">
+            <div class="card-body">
+                <h4 class="card-title">Liste des utlisateurs</h4>
+                <p class="card-description"></p>
+
+                <table>
+                    <tr>
+
+                        <td>
+                            <div class="input-group-prepend">
+                            <input type="text" class="form-control" id="myInput" [(ngModel)]="filterTerm"
+                                placeholder="chercher ..">
+
+                            <span class="input-group-text" id="search">
+                                <i class="typcn typcn-zoom"></i>
+                            </span>
+            </div>
+            </td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><label>Etat :</label></td>&nbsp;<td style="width: 200px; ;"><select class="form-control"  id="EtatDropdown" oninput="filterTable()">
+                    <option>tout</option>
+                    <option>active</option>
+                    <option>desactive</option>
+                </select>
+            </td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><label>Role :</label>&nbsp; </td>
+            <td style="width: 200px; ;"><select class="form-control" id="RoleDropdown" oninput="filterTable()">
+                    <option>tout</option>
+                    <option>admin</option>
+                    <option>user</option>
+                </select>
+            </td>    
+            </tr>
+                <tr>&nbsp;</tr>
+                <tr>&nbsp;</tr>
+                <tr>&nbsp;</tr>
+                </table>
+
+
+
+
+                <div class="table-responsive pt-3">
+                    <table id="table-user" class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Nom
+                                </th>
+                                <th>
+                                    Prenom
+                                </th>
+
+                                <th>
+                                    Email
+                                </th>
+                                <th>
+                                    Telephone
+                                </th>
+                                <th>
+                                    Etat
+                                </th>
+                                <th>
+                                    Role
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of users | filter: filterTerm">
+                                <td>
+                                    {{ user.id_user }}
+                                </td>
+                                <td>
+                                    {{ user.nom }}
+                                </td>
+                                <td>
+                                    {{ user.prenom }}
+                                </td>
+
+                                <td>
+                                    {{ user.email }}
+                                </td>
+                                <td>
+                                    {{ user.telephone }}
+                                </td>
+                                <td id="etatid"><span
+                                        [ngClass]="{'badge badge-danger': user.etat === 'desactive', 'badge badge-success' : user.etat === 'active' }">
+                                        {{ user.etat }}
+                                    </span>
+
+                                </td>
+                                <td>
+                                    {{user.role.nom}}
+
+                                </td>
+                                <td style="align-items:baseline  ;">
+
+
+                                    <button class="btn btn-md btn-sm btn-info"><span class="typcn typcn-edit "
+                                            style="color :white;"></span></button>
+
+
+                                    <button class="btn btn-md btn-sm btn-danger"><span
+                                            class="typcn typcn-delete-outline " style="color :white;"></span></button>
+                                    <button class="btn btn-md btn-sm btn-secondary"><span class="typcn typcn-zoom "
+                                            style="color :white;"></span></button>
+
+
+
+
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+</div>

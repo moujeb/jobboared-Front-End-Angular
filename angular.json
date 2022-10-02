@@ -24,8 +24,20 @@
             ],
             "styles": [
               "src/styles.css"
+              
             ],
-            "scripts": []
+            "scripts": [
+  "src/assets/vendors/js/vendor.bundle.base.js",
+  "src/assets/vendors/chart.js/Chart.min.js",
+  "src/assets/js/off-canvas.js",
+  "src/assets/js/hoverable-collapse.js",
+  "src/assets/js/template.js",
+  "src/assets/js/settings.js",
+  "src/assets/js/todolist.js",
+  "src/assets/js/dashboard.js",
+  "src/assets/js/table.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -97,5 +109,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3d0dc9c6-ded1-47b4-ad44-1298e17e62ad"
   }
 }
